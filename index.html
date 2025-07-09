@@ -2,223 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BANSITE - About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VallzXWeb - Grow A Garden Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-    body, html {
-      height: 100%;
-      font-family: 'Orbitron', sans-serif;
-      color: #fff;
-      background: black;
-    }
-
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+    body {
+      background: linear-gradient(135deg, #2b2d42, #8d99ae);
+      color: #edf2f4;
+      transition: background 0.6s ease;
     }
 
     header {
-      background: rgba(98, 12, 179, 0.7);
-      padding: 20px 0;
+      padding: 20px;
       text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: fadeIn 1.5s ease-in;
     }
 
-    header h1 {
-      font-size: 2.5em;
-      color: #c77dff;
+    h1 {
+      font-size: 2.5rem;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: rgba(50, 6, 89, 0.05);
+      gap: 15px;
+      margin-top: 10px;
     }
 
-    nav a {
-      color: #fff;
-      padding: 15px 25px;
-      text-decoration: none;
-      transition: background 0.3s;
+    nav button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
     }
 
-    nav a:hover {
-      background-color: #c77dff;
+    .dark-btn {
+      background-color: #2b2d42;
+      color: #edf2f4;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
+    .white-btn {
+      background-color: #edf2f4;
+      color: #2b2d42;
     }
 
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #ffb3ec;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
-    ul li::before {
-      content: '▶ ';
-      color: #c77dff;
-    }
-
-    .projects {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .project {
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid #c77dff;
-      border-radius: 10px;
-      padding: 20px;
-      width: 100%;
-      max-width: 400px;
-      transition: transform 0.3s;
-    }
-
-    .project:hover {
+    nav button:hover {
       transform: scale(1.05);
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(27, 3, 44, 0.7);
-      color: #aaa;
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: slideIn 1s ease-out;
     }
 
-    a {
-      color: #c77dff;
+    .product {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .testimonials {
+      margin-top: 50px;
+    }
+
+    .testimonial {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .contact a:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Welcome To VallzXStore Official Website!</h1>
+    <p>Roblox Grow A Garden Shop - We Sell : Pets, Currency, and Fruits</p>
+    <nav>
+      <button class="dark-btn" onclick="scrollToSection('products')">Products</button>
+      <button class="white-btn" onclick="scrollToSection('testimonials')">Testimonials</button>
+      <button class="dark-btn" onclick="scrollToSection('contact')">Contact</button>
+    </nav>
+  </header>
 
-<!-- Animated Background -->
-<div id="particles-js"></div>
-
-<!-- Header -->
-<header>
-  <h1>WELCOME!</h1>
-</header>
-
-<!-- Navigation -->
-<nav>
-  <a href="#about">About me</a>
-  <a href="#skills">My skills</a>
-  <a href="#Testimonials">Testimonials</a>
-  <a href="#contact">Contact me</a>
-</nav>
-
-<!-- Sections -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>Hello! I'm urban, the creator of NULLSHADE EMPIRE
-   — i am a person that work to people's discord server and help them to manage, setup, and other thing to do.</p>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>🤳🏻  image hosting</li>
-
-    <li>🎨 Banner, profile server design</li>
-
-    <li>🛠️ Koya bot. carl bot. dyno bot. etc</li>
-
-    <li>🧠 Creative Thinking</li>
-  </ul>
-</section>
-
-<section id="Testimonials">
-  <h2>Testimonials</h2>
-  <div class="projects">
-    <div class="project">
-      <h3>Shinbob777</h3>
-      <p>dangg, good work, fast setup and friendly :0, i rlly recommend this guy.</p>
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product">
+      <h3>Pets</h3>
+      <p>Choose from a variety of pets to boost your garden productivity.</p>
     </div>
-    <div class="project">
-      <h3>JoeBobb8</h3>
-      <p>wow, just.. wowww, nice work buddy keep it up.</p>
+    <div class="product">
+      <h3>Game Currency</h3>
+      <p>Buy in-game coins to upgrade tools and buy seeds instantly!</p>
     </div>
-  </div>
-    <div class="project">
-      <h3>Alexv334</h3>
-      <p>not bad not bad, keep it up.</p>
+    <div class="product">
+      <h3>Fruits</h3>
+      <p>Exclusive and rare fruits to increase your rewards and experience.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p>You can contact me at: <a href="mailto:zeckalwaysgotscamlol@gmail.com">zeckalwaysgotscamlol@gmail.com</a></p>
-</section>
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <p>"Super fast delivery and very helpful support!" 
+        -@NNzNaufalss</p>
+    </div>
+    <div class="testimonial">
+      <p>"Cute pet, Good skill, Cheap price, fast delivery!" 
+        -@BobSupremeX</p>
+    </div>
+    <div class="testimonial">
+      <p>"Trusted store. Will buy again for sure!" 
+        -@LynxzUrban334</p>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer>
-  <p>© 2025 BANSITE. Built with</p>
-</footer>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Need help or want to place an order?</p>
+    <a href="https://wa.me/62895608886400" target="_blank">Chat via WhatsApp</a>
+  </section>
 
-<!-- Particles JS -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 100 },
-      color: { value: "#c77dff" },
-      shape: { type: "circle" },
-      opacity: { value: 0.6 },
-      size: { value: 3 },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: "#ffffff",
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: "none",
-        random: false,
-        straight: false
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: { enable: true, mode: "grab" },
-        onclick: { enable: true, mode: "push" },
-        resize: true
-      },
-      modes: {
-        grab: { distance: 140, line_linked: { opacity: 0.7 } },
-        push: { particles_nb: 4 }
-      }
-    },
-    retina_detect: true
-  });
-</script>
-
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
